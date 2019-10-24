@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { TabsPageRoutingModule } from './tabs-routing.module';
 
 import { TabsPage } from './tabs.page';
+// import { ImagenModalPageModule } from '../imagen-modal/imagen-modal.module';
 
 @NgModule({
   imports:
@@ -13,6 +14,7 @@ import { TabsPage } from './tabs.page';
       IonicModule,
       CommonModule,
       FormsModule,
+  //    ImagenModalPageModule,
       TabsPageRoutingModule
     ],
   declarations:

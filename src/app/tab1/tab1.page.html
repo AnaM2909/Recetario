@@ -1,12 +1,11 @@
-    <ion-nav-back-button></ion-nav-back-button>
-
-
+<ion-item class ="Botones">
+    <ion-title class="Titulo">Galeria de platos salados</ion-title > 
+  </ion-item>
 <!--Galeria de imagenes (RECETARIO)-->
 <ion-grid class="Galeria">
   <ion-row>
     <ion-col size ="6" *ngFor="let Imangenes of Imangenes">
-      <img src="{{Imangenes}}">
+      <img src="{{Imangenes}}" (click)="VerImagen()">
   </ion-col> 
 </ion-row>
 </ion-grid>
-<app-nombre></app-nombre>

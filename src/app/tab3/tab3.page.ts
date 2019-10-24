@@ -15,6 +15,9 @@ export class Tab3Page implements OnInit {
     'assets/Pasapalos/Tequeno.jpg',
       // tslint:disable-next-line:semicolon
   ]
+  VerImagen(imagenes) {
+    alert('Probando las imagenes');
+  }
   ngOnInit() {
   }
 

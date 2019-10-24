@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController, NavParams } from '@ionic/angular';
+import { ImagenModalPage } from '../imagen-modal/imagen-modal.page';
+
 
 @Component({
   selector: 'app-tab1',
@@ -6,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab1.page.scss'],
 })
 export class Tab1Page implements OnInit {
-  constructor() { }
+  constructor(public modalCtrl: ModalController) { }
   Imangenes = [
     'assets/PlatosS/Asado Negro.jpg',
     'assets/PlatosS/Empanada.jpg',
@@ -16,10 +19,21 @@ export class Tab1Page implements OnInit {
     'assets/PlatosS/pescado.jpg',
     'assets/PlatosS/Sopa.jpg',
     'assets/PlatosS/Cachapa.jpg',
-  // tslint:disable-next-line:semicolon
-  ]
-
+  ];
+  VerImagen(imagenes) {
+   {
+     this.modalCtrl.create({
+      component : ImagenModalPage
+     }).then(modal => modal.present());
+   // this.modalCtrl.create({
+   //   component : ImagenModalPage,
+     /* componentProps : {
+        imagen : imagenes,
+        text : 'probando',
+      } */
+   // }).then(modal => modal.present());
+    }
+  }
   ngOnInit() {
   }
-
 }
