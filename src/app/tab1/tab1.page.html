@@ -1,0 +1,12 @@
+    <ion-nav-back-button></ion-nav-back-button>
+
+
+<!--Galeria de imagenes (RECETARIO)-->
+<ion-grid class="Galeria">
+  <ion-row>
+    <ion-col size ="6" *ngFor="let Imangenes of Imangenes">
+      <img src="{{Imangenes}}">
+  </ion-col> 
+</ion-row>
+</ion-grid>
+<app-nombre></app-nombre>
